@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "bun --bun next dev",
+    "build": "bun --bun next build",
+    "start": "bun --bun next start",
+    "build:sandbox": "tsx scripts/build.prod.ts"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.50",
+    "@next/env": "^16.3.2",
+    "ai": "^7.0.77",
+    "dotenv": "^17.4.2",
+    "e2b": "^2.45.0",
+    "inngest": "^4.18.1",
     "next": "16.3.2",
+    "octokit": "^5.0.5",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.2",
     "tailwindcss": "^4",
+    "tsx": "^4.23.12",
     "typescript": "^5"
   },
   "packageManager": "bun@1.4.0",
